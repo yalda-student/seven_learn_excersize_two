@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:seven_learn_excersize_two/strings.dart';
 
 void main() {
@@ -137,9 +138,10 @@ class _Title extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
+            Text(
               'Coeurdes Alpes',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              style: GoogleFonts.montserrat()
+                  .copyWith(fontWeight: FontWeight.bold, fontSize: 24),
             ),
             TextButton(
               onPressed: () {},
@@ -193,7 +195,7 @@ class _DescriptionState extends State<_Description> {
   }
 
   String get textSummery =>
-      '${AppStrings.description.substring(0, AppStrings.description.length ~/ 3)} ....';
+      '${AppStrings.description.substring(0, AppStrings.description.length ~/ 5)} ....';
 }
 
 class _ReadMoreButton extends StatelessWidget {
@@ -226,9 +228,10 @@ class _Facilities extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+         Text(
           'Facilities',
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          style: GoogleFonts.montserrat()
+              .copyWith(fontSize: 18, fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 16),
         Row(
@@ -285,19 +288,20 @@ class _Price extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Price',
           style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
         ),
         Text(
           '\$199',
-          style: TextStyle(
-              color: Color(0xff2DD7A4),
+          style: GoogleFonts.montserrat()
+              .copyWith(
+              color: const Color(0xff2DD7A4),
               fontSize: 24,
-              fontWeight: FontWeight.bold),
+              fontWeight: FontWeight.w800),
         ),
       ],
     );
